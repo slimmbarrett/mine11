@@ -26,16 +26,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Разделитель */
-.separator {
-    height: 1px;
-    background-color: #4d5d6e; /* Тёмно-серый цвет для разделителя */
-    margin: 15px 0;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /* Текст с фоном для "By CashGenerator" и "1Win-CashGen" */
 .by-cashgenerator, .by-1winpromo {
     color: #ffffff;
@@ -61,7 +51,7 @@ body {
 .cell {
     width: 55px;
     height: 55px;
-    background: linear-gradient(135deg, #37B0CE 0%, #01586B 100%);
+    background-color: #4c7b9f; /* Ярко-голубой цвет */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +74,7 @@ body {
 
 /* Безопасная ячейка */
 .cell.safe {
-    background: linear-gradient(135deg, #D8FFFC 0%, #A0FFF7 22%, #8DFFF6 49%, #9AF8F0 73%, #BAFFF9 100%);
+    background-color: #008cba; /* Ярко-синий фон */
     color: #ffffff;
     animation: fadeInStar 0.5s forwards;
 }
@@ -136,23 +126,5 @@ body {
 
 /* Эффект на кнопку при наведении */
 .start-button:hover {
-    background-color: #e64a19; /* Темно-оранжевый */
-}
-
-/* Уменьшение размера шрифта на мобильных устройствах */
-@media (max-width: 600px) {
-    .game-container {
-        width: 280px;
-    }
-    .start-button {
-        font-size: 20px;
-    }
-    .mine-control button {
-        font-size: 18px;
-    }
-    .cell {
-        font-size: 20px;
-        width: 50px;
-        height: 50px;
-    }
+    background-color: #e64a19; /* Темно-оранжевый на наведение */
 }
