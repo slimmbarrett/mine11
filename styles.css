@@ -45,12 +45,13 @@ body {
 /* Сетка 5x5 */
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 56px); /* Установлено фиксированное значение для каждой колонки */
+    grid-template-rows: repeat(5, 56px); /* Установлено фиксированное значение для каждой строки */
     gap: 0;
     margin-bottom: 25px;
     position: relative;
-    width: 275px; /* Подогнано под размеры изображения рамки */
-    height: 275px; /* Подогнано под размеры изображения рамки */
+    width: 280px; /* Ширина подогнана под 5 клеток по 56px */
+    height: 280px; /* Высота подогнана под 5 клеток по 56px */
     background-image: url('https://raw.githubusercontent.com/slimmbarrett/mine11/main/cellsFrame.40eb57f7e28f2ca52ad4.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -59,8 +60,8 @@ body {
 
 /* Ячейки сетки */
 .cell {
-    width: 50px;
-    height: 50px;
+    width: 56px;
+    height: 56px;
     background-color: #4c7b9f; /* Ярко-голубой цвет */
     display: flex;
     justify-content: center;
