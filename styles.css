@@ -1,11 +1,13 @@
-/* Общий стиль для всей страницы */
+/* Фоновое изображение для всей страницы */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #0e1a2b; /* Темно-синий фон */
+    background-image: url('https://github.com/slimmbarrett/mine11/blob/main/backgroundPhone.22ee95b37f8094fe25be.png?raw=true');
+    background-size: cover; /* Обрезать и растянуть изображение, чтобы оно покрывало весь экран */
+    background-position: center; /* Центрировать изображение */
     color: #ffffff;
     font-family: Arial, sans-serif;
 }
@@ -13,7 +15,7 @@ body {
 /* Контейнер игры */
 .game-container {
     text-align: center;
-    background-color: #1c2a38; /* Более яркий фон */
+    background-color: rgba(28, 42, 56, 0.8); /* Полупрозрачный темный фон */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6); /* Яркая тень */
@@ -127,4 +129,28 @@ body {
 /* Эффект на кнопку при наведении */
 .start-button:hover {
     background-color: #e64a19; /* Темно-оранжевый на наведение */
+}
+
+/* Стиль для отображения количества оставшихся мин */
+.mine-status {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+/* Кнопка перезапуска игры */
+.restart-button {
+    background-color: #ff9800;
+    color: #ffffff;
+    font-size: 22px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.restart-button:hover {
+    background-color: #fb8c00;
 }
