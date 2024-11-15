@@ -124,4 +124,9 @@ body {
     border-radius: 10px;
     transition: background-color 0.3s;
     margin-top: 25px;
-    box-shadow
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.6); /* Светящаяся тень */
+}
+
+.start-button:hover {
+    background-color: #ff7043; /* Цвет при наведении */
+}
