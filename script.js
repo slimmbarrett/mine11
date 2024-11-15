@@ -9,7 +9,6 @@ function createGrid() {
     for (let i = 0; i < 25; i++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");
-        cell.addEventListener("click", () => revealCell(i, cell));
         grid.appendChild(cell);
     }
 }
@@ -34,7 +33,26 @@ function decreaseMines() {
 function startGame() {
     createGrid(); // Пересоздание сетки при запуске игры
     mines = generateMines(); // Генерация позиций мин
+    revealAllCells(); // Открытие всех ячеек сразу
     alert("Мины расставлены. Найдите безопасные ячейки!");
+}
+
+// Открытие всех ячеек сразу
+function revealAllCells() {
+    const cells = Array.from(grid.children);
+    cells.forEach((cell, index) => {
+        if (mines.includes(index)) {
+            // Если это мина, показываем символ 💣
+            cell.textContent = "💣"; 
+            cell.classList.add("mine");
+        } else {
+            // Если это безопасная ячейка, показываем звезду
+            cell.textContent = "⭐"; // Появляется звезда
+            cell.classList.add("safe");
+        }
+        // Убираем возможность повторного нажатия на ячейку
+        cell.removeEventListener("click", () => revealCell(index, cell));
+    });
 }
 
 // Генерация случайных мин
@@ -45,30 +63,6 @@ function generateMines() {
         minePositions.add(randomIndex);
     }
     return Array.from(minePositions);
-}
-
-// Открытие ячейки
-function revealCell(index, cell) {
-    if (mines.includes(index)) {
-        // Если это мина, показываем символ 💣
-        cell.textContent = "💣"; 
-        cell.classList.add("mine");
-        
-        // Используем setTimeout, чтобы показать сообщение после анимации
-        setTimeout(() => {
-            alert("Вы попали на мину!"); // Показываем сообщение только после анимации
-        }, 1000); // Задержка в 1 секунду (время анимации мины)
-
-        // Останавливаем игру, убирая обработчики
-        Array.from(grid.children).forEach(c => c.replaceWith(c.cloneNode(true)));
-    } else {
-        // Если это безопасная ячейка, показываем звезду
-        cell.textContent = "⭐"; // Появляется звезда
-        cell.classList.add("safe");
-
-        // Отключаем повторное нажатие на эту ячейку
-        cell.removeEventListener("click", () => revealCell(index, cell));
-    }
 }
 
 // Инициализация игры при загрузке
