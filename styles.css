@@ -51,7 +51,7 @@ body {
 .cell {
     width: 55px;
     height: 55px;
-    background-color: #4c7b9f; /* Ярко-голубой цвет */
+    background-color: rgba(59,130,246,.5); /* Новый цвет клеток */
     display: flex;
     justify-content: center;
     align-items: center;
