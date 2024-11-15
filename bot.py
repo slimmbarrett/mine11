@@ -1,13 +1,15 @@
+import os
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Updater, CommandHandler, CallbackContext
 
-# Вставьте ваш токен сюда
-BOT_TOKEN = '7537994303:AAG15uJYwAmzVINLchNmzIjZ7So95RdkpdI'
+# Загрузка токена из переменной окружения для безопасности
+BOT_TOKEN = os.getenv('7537994303:AAG15uJYwAmzVINLchNmzIjZ7So95RdkpdI')
 
 # URL вашего Web App
 WEB_APP_URL = 'https://mine11.vercel.app/'
 
 def start(update: Update, context: CallbackContext) -> None:
+    """Обработчик команды /start"""
     # Кнопка с веб-приложением
     keyboard = [
         [InlineKeyboardButton("Начать игру", web_app={"url": WEB_APP_URL})]
@@ -21,6 +23,12 @@ def start(update: Update, context: CallbackContext) -> None:
     )
 
 def main() -> None:
+    """Основная функция для запуска бота"""
+    # Получаем токен из переменной окружения
+    if BOT_TOKEN is None:
+        print("Ошибка: Не указан BOT_TOKEN в переменных окружения!")
+        return
+
     # Создаем экземпляр бота и передаем токен
     updater = Updater(BOT_TOKEN)
 
@@ -31,10 +39,11 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler('start', start))
 
     # Запускаем бота
-    updater.start_polling()
-
-    # Ожидаем завершения
-    updater.idle()
+    try:
+        updater.start_polling()
+        updater.idle()
+    except Exception as e:
+        print(f"Ошибка при запуске бота: {e}")
 
 if __name__ == '__main__':
     main()
