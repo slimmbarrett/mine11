@@ -8,18 +8,16 @@ body {
     background-color: #0e1a2b; /* Темно-синий фон */
     color: #ffffff;
     font-family: Arial, sans-serif;
-    background-image: url('https://raw.githubusercontent.com/slimmbarrett/mine11/main/backgroundPhone.22ee95b37f8094fe25be.png');
-    background-size: cover;
-    background-position: center;
 }
 
 /* Контейнер игры */
 .game-container {
     text-align: center;
-    background-color: rgba(28, 42, 56, 0.9); /* Прозрачный фон для контейнера */
+    background-color: #1c2a38; /* Более яркий фон */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6); /* Яркая тень */
+    width: 320px;
 }
 
 /* Логотип игры */
@@ -44,19 +42,15 @@ body {
 /* Сетка 5x5 */
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 56px); /* Установлено фиксированное значение для каждой колонки */
-    grid-template-rows: repeat(5, 56px); /* Установлено фиксированное значение для каждой строки */
-    gap: 0;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
     margin-bottom: 25px;
-    position: relative;
-    width: 280px; /* Ширина подогнана под 5 клеток по 56px */
-    height: 280px; /* Высота подогнана под 5 клеток по 56px */
 }
 
 /* Ячейки сетки */
 .cell {
-    width: 56px;
-    height: 56px;
+    width: 55px;
+    height: 55px;
     background-color: #4c7b9f; /* Ярко-голубой цвет */
     display: flex;
     justify-content: center;
@@ -132,5 +126,5 @@ body {
 
 /* Эффект на кнопку при наведении */
 .start-button:hover {
-    background-color: #ff7043; /* Цвет при наведении */
+    background-color: #e64a19; /* Темно-оранжевый на наведение */
 }
