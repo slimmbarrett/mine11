@@ -20,7 +20,7 @@ body {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6); /* Яркая тень */
-    width: 320px;
+    width: 340px; /* Подогнано для сетки */
 }
 
 /* Логотип игры */
@@ -46,19 +46,21 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
+    gap: 0;
     margin-bottom: 25px;
     position: relative;
+    width: 275px; /* Подогнано под размеры изображения рамки */
+    height: 275px; /* Подогнано под размеры изображения рамки */
     background-image: url('https://raw.githubusercontent.com/slimmbarrett/mine11/main/cellsFrame.40eb57f7e28f2ca52ad4.png');
     background-size: 100% 100%;
+    background-repeat: no-repeat;
     border-radius: 10px;
-    padding: 10px;
 }
 
 /* Ячейки сетки */
 .cell {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     background-color: #4c7b9f; /* Ярко-голубой цвет */
     display: flex;
     justify-content: center;
