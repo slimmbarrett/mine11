@@ -26,6 +26,16 @@ body {
     margin-bottom: 15px;
 }
 
+/* Разделитель */
+.separator {
+    height: 1px;
+    background-color: #4d5d6e; /* Тёмно-серый цвет для разделителя */
+    margin: 15px 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Текст с фоном для "By CashGenerator" и "1Win-CashGen" */
 .by-cashgenerator, .by-1winpromo {
     color: #ffffff;
