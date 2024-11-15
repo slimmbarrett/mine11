@@ -5,7 +5,7 @@ from telegram.ext import Updater, CommandHandler, CallbackContext
 BOT_TOKEN = '7537994303:AAG15uJYwAmzVINLchNmzIjZ7So95RdkpdI'
 
 # URL вашего Web App
-WEB_APP_URL = 'https://mine-game1.vercel.app/'
+WEB_APP_URL = 'https://mine11.vercel.app/'
 
 def start(update: Update, context: CallbackContext) -> None:
     # Кнопка с веб-приложением
