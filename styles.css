@@ -51,7 +51,7 @@ body {
 .cell {
     width: 55px;
     height: 55px;
-    background-color: #4c7b9f; /* Ярко-голубой цвет */
+    background: linear-gradient(135deg, #37B0CE 0%, #01586B 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +74,7 @@ body {
 
 /* Безопасная ячейка */
 .cell.safe {
-    background-color: #008cba; /* Ярко-синий фон */
+    background: linear-gradient(135deg, #D8FFFC 0%, #A0FFF7 22%, #8DFFF6 49%, #9AF8F0 73%, #BAFFF9 100%);
     color: #ffffff;
     animation: fadeInStar 0.5s forwards;
 }
