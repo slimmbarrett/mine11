@@ -8,7 +8,7 @@ body {
     background-color: #0e1a2b; /* Темно-синий фон */
     color: #ffffff;
     font-family: Arial, sans-serif;
-    background-image: url('https://github.com/slimmbarrett/mine11/blob/main/backgroundPhone.22ee95b37f8094fe25be.png');
+    background-image: url('https://raw.githubusercontent.com/slimmbarrett/mine11/main/backgroundPhone.22ee95b37f8094fe25be.png');
     background-size: cover;
     background-position: center;
 }
@@ -16,7 +16,7 @@ body {
 /* Контейнер игры */
 .game-container {
     text-align: center;
-    background-color: rgba(28, 42, 56, 0.8); /* Полупрозрачный фон для контейнера */
+    background-color: rgba(28, 42, 56, 0.9); /* Прозрачный фон для контейнера */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6); /* Яркая тень */
@@ -124,9 +124,10 @@ body {
     border-radius: 10px;
     transition: background-color 0.3s;
     margin-top: 25px;
-    box-shadow: 0 0 15px rgba(255, 87, 34, 0.6); /* Светящаяся тень */
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.6); /* Яркая тень */
 }
 
+/* Эффект на кнопку при наведении */
 .start-button:hover {
     background-color: #ff7043; /* Цвет при наведении */
 }
