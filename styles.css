@@ -48,6 +48,11 @@ body {
     grid-template-columns: repeat(5, 1fr);
     gap: 12px;
     margin-bottom: 25px;
+    position: relative;
+    background-image: url('https://raw.githubusercontent.com/slimmbarrett/mine11/main/cellsFrame.40eb57f7e28f2ca52ad4.png');
+    background-size: 100% 100%;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 /* Ячейки сетки */
