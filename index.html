@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +8,34 @@
 </head>
 <body>
     <div class="game-container">
-        <!-- Заголовок с изображением -->
         <div class="header">
-            <img src="https://zafeminizm.ru/wp-content/uploads/2024/05/1winmines.png" alt="MineGame Logo" class="game-logo">
+            <img class="game-logo" src="your-logo.png" alt="Game Logo">
         </div>
-
-        <!-- Надпись By CashGenerator -->
-        <div class="by-cashgenerator">By CashGenerator</div>
-
-        <!-- Надпись 1WinPromo- CashGen -->
-        <div class="by-1winpromo">1Win-CashGen</div>
-
-        <!-- Сетка 5x5 -->
-        <div class="grid" id="grid">
-            <!-- 25 ячеек, заполняются через JavaScript -->
+        <div class="grid">
+            <!-- Клетки игры -->
+            <div class="cell">1</div>
+            <div class="cell">2</div>
+            <div class="cell">3</div>
+            <div class="cell">4</div>
+            <div class="cell">5</div>
+            <div class="cell">6</div>
+            <div class="cell">7</div>
+            <div class="cell">8</div>
+            <div class="cell">9</div>
+            <div class="cell">10</div>
+            <!-- Добавьте остальные клетки по аналогии -->
         </div>
-
-        <!-- Управление количеством мин -->
-        <div class="mine-control">
-            <button onclick="decreaseMines()">-</button>
-            <span id="mineCount">3</span>
-            <button onclick="increaseMines()">+</button>
-        </div>
-
-        <!-- Кнопка запуска игры с надписью в ней -->
-        <button class="start-button" onclick="startGame()">Get Signal</button>
+        <button class="start-button">Start Game</button>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Определение градиента -->
+    <svg width="0" height="0">
+        <defs>
+            <radialGradient id="Gradient-2_c_1_r23" cx="0" cy="0" r="1" fx="0" fy="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-17.6 -22.9 21 -16.1 36.6 48.7)">
+                <stop offset="0" stop-color="#1c2130"></stop>
+                <stop offset="1" stop-color="#1c2130" stop-opacity="0"></stop>
+            </radialGradient>
+        </defs>
+    </svg>
 </body>
 </html>
