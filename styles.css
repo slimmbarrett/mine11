@@ -126,5 +126,23 @@ body {
 
 /* Эффект на кнопку при наведении */
 .start-button:hover {
-    background-color: #e64a19; /* Темно-оранжевый на наведение */
+    background-color: #e64a19; /* Темно-оранжевый */
+}
+
+/* Уменьшение размера шрифта на мобильных устройствах */
+@media (max-width: 600px) {
+    .game-container {
+        width: 280px;
+    }
+    .start-button {
+        font-size: 20px;
+    }
+    .mine-control button {
+        font-size: 18px;
+    }
+    .cell {
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+    }
 }
